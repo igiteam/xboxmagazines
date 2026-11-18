@@ -1,8 +1,8 @@
 
 #!/bin/bash
 
-SOURCE="$HOME/Downloads/pczone_github"
-DEST="$HOME/Downloads/pczonemagazines"
+SOURCE="$HOME/Downloads/xbox_github"
+DEST="$HOME/Downloads/xboxmagazines"
 
 cd "$DEST" || exit 1
 
