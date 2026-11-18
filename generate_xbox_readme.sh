@@ -1,12 +1,12 @@
 
 cd ~/Downloads
 
-cat > generate-xbox-readme.sh <<'BASH'
+cat > generate-pczone-readme.sh <<'BASH'
 #!/bin/bash
 
 set -e
 
-REPO="igiteam/xboxmagazines"
+REPO="igiteam/pczonemagazines"
 BRANCH="main"
 
 API="https://api.github.com/repos/$REPO/git/trees/$BRANCH?recursive=1"
@@ -37,9 +37,9 @@ output = []
 
 output << "# PC Zone Magazines"
 output << ""
-output << "[https://igiteam.github.io/xboxmagazines/](https://igiteam.github.io/xboxmagazines/)"
+output << "[https://igiteam.github.io/pczonemagazines/](https://igiteam.github.io/pczonemagazines/)"
 output << ""
-output << "[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fxboxmagazines%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fxboxmagazines%2Fblob%2Fmain%2FREADME.md)"
+output << "[https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpczonemagazines%2Fblob%2Fmain%2FREADME.md](https://readme.macosxjs.com/?url=https%3A%2F%2Fgithub.com%2Figiteam%2Fpczonemagazines%2Fblob%2Fmain%2FREADME.md)"
 output << ""
 output << "| Cover | Issue | Pages |"
 output << "|-------|-------|-------|"
@@ -80,8 +80,8 @@ directories.each do |dir|
     next
   end
 
-  cover = "https://raw.githubusercontent.com/igiteam/xboxmagazines/refs/heads/main/#{cover_file}"
-  html = "https://html.macosxjs.com/?https://raw.githubusercontent.com/igiteam/xboxmagazines/refs/heads/main/#{html_file}"
+  cover = "https://raw.githubusercontent.com/igiteam/pczonemagazines/refs/heads/main/#{cover_file}"
+  html = "https://html.macosxjs.com/?https://raw.githubusercontent.com/igiteam/pczonemagazines/refs/heads/main/#{html_file}"
 
   output << "| [![#{title}](#{cover})](#{html}) | [#{title}](#{html}) | #{page_count} |"
 
@@ -100,6 +100,6 @@ puts "======================================"
 
 BASH
 
-chmod +x generate-xbox-readme.sh
+chmod +x generate-pczone-readme.sh
 
-./generate-xbox-readme.sh
+./generate-pczone-readme.sh
